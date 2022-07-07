@@ -28,4 +28,99 @@
 
     El ejercicio final requiere el uso de las tecnologías demandadas para la vacante, como lo son HTML, Javascript, PHP y MySQL.
     */
+
+    $fecha = date('Y-m-d');
 ?>
+<html lang="es">
+    <head>
+        <link src="./css/index.css">
+        
+    </head>
+    <body>
+        <h1>Ejercicio cuatro</h1>
+
+        <div>
+            <form id="formReserva" action="checkout.php" name="formReserva" method="post">
+                <fieldset>
+                    <legend>
+                        Pre-reserva
+                    </legend>
+
+                    <table>
+                        <tr>
+                            <td>
+                                Tour
+                            </td>
+                            <td>
+                                <select name="tour" id="tour">
+                                    <option value="A">Tour A (50 USD)</option>
+                                    <option value="B">Tour B (75 USD)</option>
+                                    <option value="C">Tour C (80 USD)</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Pasajeros
+                            </td>
+                            <td>
+                                <select name="pasajeros" id="pasajeros">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Fecha
+                            </td>
+                            <td>
+                                <input type="date" name="fecha" id="fecha" min="<?php echo $fecha; ?>" value="<?php echo $fecha; ?>">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Pick up 
+                            </td>
+                            <td>
+                                <select name="pickup" id="pickup">
+                                    <option value="1">8:00 h</option>
+                                    <option value="2">9:00 h</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                Precio
+                            </td>
+                            <td>
+                                <input type="hidden" name="precio" id="precio">
+                                <div id="textoPrecio">
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="submit" name="submit" value="BOOK NOW">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </div>
+        <script type="text/javascript" src="./js/index.js"></script>
+    </body>
+</html>
