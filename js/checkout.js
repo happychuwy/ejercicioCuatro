@@ -23,7 +23,7 @@ function validar(e)
         .then(respuestaCodificada => respuestaCodificada.json()) // Decodificar JSON que nos responde PHP
         .then(respuestaDecodificada => {
             // Aquí ya tenemos la respuesta lista para ser procesada
-            console.log(respuestaDecodificada);
+            //console.log(respuestaDecodificada);
             document.getElementById('tdSubmit').innerHTML=`<input type="submit" name="submit" id="submit" value="CONFIRMA RESERVACION">`;
         })
     } catch (error) {

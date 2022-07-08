@@ -30,7 +30,7 @@
         $id_cliente = mysqli_fetch_array($resulstadoIdCliente);
         $id_cliente = $id_cliente['id_cliente'];
 
-        $json['msj'].="Se guardaron los datos del cliente.";
+        $json['msj']="Se guardaron los datos del cliente.";
         //GUARDAR DATOS DE LA RESERVACION
         $queryReservacion="INSERT INTO reservaciones (tour, pasajeros, fecha, pickup, precio, id_cliente) VALUES ('$tour','$pasajeros','$fecha','$pickup','$precio', '$id_cliente')";
         $resultadoReservacion=mysqli_query($conexion,$queryReservacion);
@@ -38,7 +38,7 @@
 
         if($resultadoReservacion)
         {
-            $json['msj'].="Reservación guardada correctamente.";
+            $json['msj']="Reservación guardada correctamente.";
             $json['success']=true;
         }
     }
