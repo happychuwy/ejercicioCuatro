@@ -76,12 +76,17 @@ if(isset($_POST))
                     </legend>
 
                     <table>
+                        <input type="hidden" name="tour" value="<?php echo $_POST['tour'] ; ?>">
+                        <input type="hidden" name="pasajeros" value="<?php echo $_POST['pasajeros'] ; ?>">
+                        <input type="hidden" name="fecha" value="<?php echo $_POST['fecha'] ; ?>">
+                        <input type="hidden" name="pickup" value="<?php echo $_POST['pickup'] ; ?>">
+                        <input type="hidden" name="precio" value="<?php echo $_POST['precio'] ; ?>">
                         <tr>
                             <td>
                                 Nombre
                             </td>
                             <td>
-                                <input type="text" name="nombre" id="nombre">
+                                <input type="text" name="nombre" id="nombre" required>
                             </td>
                         </tr>
                         <tr>
@@ -89,7 +94,7 @@ if(isset($_POST))
                                 Email
                             </td>
                             <td>
-                                <input type="email" name="email" id="email">
+                                <input type="email" name="email" id="email" required>
                             </td>
                         </tr>
                         <tr>
@@ -97,12 +102,12 @@ if(isset($_POST))
                                 Teléfono
                             </td>
                             <td>
-                                <input type="tel" name="telefono" id="telefono" pattern="[0-9]{10}">
+                                <input type="tel" name="telefono" id="telefono" pattern="[0-9]{10}" required>
                             </td>
                         </tr>
                             <tr>
-                                <td colspan="2">
-                                    <input type="submit" name="submit" value="CONFIRMA RESERVACION">
+                                <td colspan="2" id="tdSubmit">
+                                    <input type="submit" name="submit" id="submit" value="CONFIRMA RESERVACION">
                                 </td>
                             </tr>
                         </table>

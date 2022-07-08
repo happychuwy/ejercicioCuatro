@@ -85,7 +85,7 @@
                                 Fecha
                             </td>
                             <td>
-                                <input type="date" name="fecha" id="fecha" min="<?php echo $fecha; ?>" value="<?php echo $fecha; ?>">
+                                <input type="date" name="fecha" id="fecha" min="<?php echo $fecha; ?>" value="<?php echo $fecha; ?>" required>
                             </td>
                         </tr>
 
